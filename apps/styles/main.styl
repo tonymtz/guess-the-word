@@ -1,0 +1,186 @@
+$body-bkg = #212125
+
+$home-bkg = #212125
+$home-color = #fff
+$category-blue = #6aacc5
+$category-green = #6bb8b1
+$category-red = #dc694f
+$category-yellow = #dbb62b
+
+$play-bkg = #212125
+$play-color = #fff
+$play-key-bkg = #595758
+$play-key-color = #fff
+$play-key-green = #6bb8b1
+$play-key-red = #dc694f
+$play-top-bkg = #000
+$play-continue-bkg = #6aacc5
+$play-continue-color = #fff
+$play-hearth-color = #dc694f
+$play-hearth-border = #cc4d32
+$play-footer-bkg = #6aacc5
+
+@font-face
+  font-family Droid Sans Mono
+  font-style normal
+  font-weight 400
+  src url(./../fonts/droidsansmono.ttf)
+
+body
+  background $body-bkg
+  border none
+  font-family Droid Sans Mono
+
+#app
+  height 100%
+
+  .home
+    background $home-bkg
+    height 100%
+    text-align center
+
+    .title
+      color $home-color
+      font-size 3rem
+      font-weight 900
+      height 6rem
+      line-height 6rem
+      margin 0
+
+    ul.categories
+      height calc(100% - 6rem)
+      margin 0
+      overflow auto
+      position absolute
+      text-align center
+
+      li.category
+        color $home-color
+        display inline-block
+        font-size 3rem
+        list-style none
+        margin-bottom 0.5rem
+        width 100%
+
+        &:last-child
+          margin 0
+
+        &.blue
+          background $category-blue
+        &.green
+          background $category-green
+        &.red
+          background $category-red
+        &.yellow
+          background $category-yellow
+
+  .play
+    background $play-bkg
+    color $play-color
+    height 100%
+
+    .top
+      background $play-top-bkg
+      font-size 1.5em
+      height 3rem
+      line-height 3rem
+
+      .pause
+        float right
+        width 20%
+
+      .time
+        float right
+        width 70%
+
+        .fa
+          margin-right 0.25em
+
+    .pause-screen
+      font-family Droid Sans Mono
+      font-size 4rem
+      text-align center
+      top 3rem
+
+    .word
+      top 3rem
+
+      ul
+        margin 0
+        text-align center
+
+        li.item
+          display inline-block
+          font-family Droid Sans Mono
+          font-size 4rem
+          list-style none
+          margin 0.5rem
+
+    .keyboard
+      bottom 5rem
+      position absolute
+
+      .button
+        background $play-key-bkg
+        color $play-key-color
+        font-family Droid Sans Mono
+        text-transform uppercase
+        margin 0.2rem
+
+        &.correct
+          background $play-key-green
+
+        &.wrong
+          background $play-key-red
+
+    footer
+      background $play-footer-bkg
+      bottom 0
+      left 0
+      height 3rem
+      margin 0
+      position absolute
+      width 100%
+
+      .status
+        float left
+        height 100%
+        text-align center
+        width 100%
+
+        .rating
+          height 3rem
+          margin 0
+
+          li
+            display inline-block
+            list-style none
+            margin 0.6rem
+
+            .fa
+              font-size 2em
+              color $play-hearth-color
+
+              &.fa-heart-o
+                color $play-hearth-border
+
+      .action
+        .bottom
+          background: $play-continue-bkg
+          color $play-continue-color
+          height 100%
+          margin 0
+          text-transform uppercase
+          width 100%
+
+    .message
+      bottom 50%
+      left 0
+      position absolute
+      right 0
+      text-align center
+
+      h1
+        color #dbb62b
+        font-size 3.5rem
+        font-weight 900

@@ -1,0 +1,31 @@
+.row.play(data-ng-init="initialize()")
+    .top
+        .pause
+            i.fa(data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}")
+        .time
+            i.fa.fa-clock-o
+            span {{countDown}}
+    .large-12.columns.word(data-ng-hide="pause")
+        ul.word
+            li.item(data-ng-repeat="item in hidden")
+                span.char(data-ng-if="item.hidden") &middot;
+                span.char(data-ng-if="!item.hidden") {{item.char}}
+
+    .large-12.columns.pause-screen(data-ng-show="pause")
+        span PAUSE
+
+    .large-12.columns.keyboard(data-ng-hide="pause")
+        button.button.radius.tiny.secondary(data-ng-repeat="key in keys" data-ng-click="digest(key)" data-ng-disabled="key.status || gameover" data-ng-class="{correct: key.status === 1, wrong: key.status === 2}") {{key.char}}
+
+    footer
+        .action(data-ng-show="gameover")
+            button.bottom(data-ng-click="initialize()") New Game
+
+        .status(data-ng-hide="gameover")
+            rating(data-ng-model="chances")
+
+    .message(data-ng-show="gameover")
+        .win(data-ng-show="win")
+            h1 GOOD JOB!
+        .loose(data-ng-show="!win")
+            h1 Try it again!

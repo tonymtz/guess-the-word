@@ -1,0 +1,6 @@
+.home.row(data-ng-init="initialize()")
+    h1.title CATEGORIES
+
+    ul.categories
+        li.category(data-ng-repeat="category in categories" data-ng-init="this.color = color()" data-ng-class="this.color")
+            span.name(data-ng-click="setCategory(category)") {{category}}

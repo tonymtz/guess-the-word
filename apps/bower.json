@@ -1,0 +1,19 @@
+{
+  "name": "huddy-signup",
+  "version": "0.1.0",
+  "homepage": "git@bitbucket.org:huddyme/dashboard.git",
+  "authors": [
+    "Huddy, Inc."
+  ],
+  "description": "Huddy Signup Application",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.2.26",
+    "foundation": "zurb/bower-foundation#~5.4.6",
+    "angular-ui-router": "~0.2.13",
+    "angular-translate": "~2.5.2",
+    "fontawesome": "~4.2.0"
+  }
+}

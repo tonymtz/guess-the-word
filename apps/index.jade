@@ -1,0 +1,25 @@
+// Web Application
+doctype
+//if IE 8
+   <html class="lt-ie9">
+// [if gt IE 8] <!
+html(lang="en" data-ng-app="hangman")
+    // <![endif]
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+        title {{title}}
+        //- Don't change this, jade does not insert the comment correctly
+        <!-- vendors:css -->
+        <!-- endinject -->
+        <!-- inject:css -->
+        <!-- endinject -->
+    body
+        section#app(ui-view="")
+        //- Don't change this, jade does not insert the comment correctly
+        <!-- vendors:js -->
+        <!-- only importantFile.js will be injected here -->
+        <!-- endinject -->
+        <!-- inject:js -->
+        <!-- the rest of the *.js files will be injected here -->
+        <!-- endinject -->
