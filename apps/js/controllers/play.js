@@ -1,14 +1,18 @@
 angular.module('hangman').controller('PlayController', [
   '$scope',
   '$rootScope',
-  '$state',
+  '$window',
   'WordsService',
   '$interval',
-  function($scope, $rootScope, $state, WordsService, $interval) {
+  function($scope, $rootScope, $window, WordsService, $interval) {
     'use strict';
 
     var alphabet = 'abcdefghijklmnopqrstuvwxyz',
       timer;
+
+    $scope.goHome = function() {
+      $window.history.back();
+    };
 
     $scope.initialize = function() {
       var that = this;

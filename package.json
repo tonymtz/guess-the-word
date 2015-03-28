@@ -1,11 +1,13 @@
 {
-  "name": "huddyme",
+  "name": "ftw",
   "version": "0.1.0",
   "private": true,
-  "description": "huddy",
+  "description": "find the word",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test --app=signup"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "gulp",
+    "test": "gulp test"
   },
   "engines": {
     "node": "0.10.32",
@@ -13,13 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:huddyme/dashboard.git"
+    "url": "https://github.com/TonyMtz/find-the-word.git"
   },
   "keywords": [
-    "huddy",
-    "dashboard"
+    "ftw"
   ],
-  "author": "Huddy, Inc.",
+  "author": "TonyMtz",
   "license": "MIT",
   "devDependencies": {
     "angular-mocks": "^1.3.12",
@@ -36,6 +37,8 @@
     "gulp-jshint": "^1.9.0",
     "gulp-livereload": "^3.0.2",
     "gulp-minify-css": "^0.3.11",
+    "gulp-ng-constant": "^0.3.0",
+    "gulp-rename": "^1.2.0",
     "gulp-replace-task": "^0.1.0",
     "gulp-server-livereload": "^1.2.1",
     "gulp-shell": "^0.3.0",
@@ -55,7 +58,6 @@
     "sinon": "^1.12.2"
   },
   "dependencies": {
-    "gulp-ng-constant": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "bower": "^1.3.12"
   }
 }

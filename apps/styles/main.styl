@@ -14,17 +14,34 @@ $play-key-color = #fff
 $play-key-green = #6bb8b1
 $play-key-red = #dc694f
 $play-top-bkg = #000
+$play-pause-surrender-bkg = #dc694f
+$play-pause-surrender-color = #fff
+$play-more-bkg = #6bb8b1
+$play-more-color = #fff
 $play-continue-bkg = #6aacc5
 $play-continue-color = #fff
+$play-surrender-bkg = #dc694f
+$play-surrender-color = #fff
 $play-hearth-color = #dc694f
 $play-hearth-border = #cc4d32
-$play-footer-bkg = #6aacc5
+$play-footer-bkg = #595758
 
 @font-face
   font-family Droid Sans Mono
   font-style normal
   font-weight 400
   src url(./../fonts/droidsansmono.ttf)
+
+button-lg(color-bkg, color-font)
+  background: color-bkg
+  color color-font
+  font-size 1.6rem
+  height 100%
+  line-height 4rem
+  margin 0 0 0.5rem 0
+  padding 0
+  text-transform uppercase
+  width 100%
 
 body
   background $body-bkg
@@ -102,8 +119,12 @@ body
       text-align center
       top 3rem
 
+      .action
+        .button
+          button-lg($play-pause-surrender-bkg, $play-pause-surrender-color)
+
     .word
-      top 3rem
+      top 1rem
 
       ul
         margin 0
@@ -120,12 +141,18 @@ body
       bottom 5rem
       position absolute
 
+      &.disabled
+        .button
+          opacity 0.4
+
       .button
         background $play-key-bkg
         color $play-key-color
         font-family Droid Sans Mono
+        font-size 0.85rem
+        padding 0.8rem 1.5rem
         text-transform uppercase
-        margin 0.2rem
+        margin 0.3rem
 
         &.correct
           background $play-key-green
@@ -137,7 +164,7 @@ body
       background $play-footer-bkg
       bottom 0
       left 0
-      height 3rem
+      height 4rem
       margin 0
       position absolute
       width 100%
@@ -149,32 +176,23 @@ body
         width 100%
 
         .rating
-          height 3rem
+          height 4rem
           margin 0
 
           li
             display inline-block
             list-style none
-            margin 0.6rem
+            margin 1rem
 
             .fa
-              font-size 2em
+              font-size 2.5em
               color $play-hearth-color
 
               &.fa-heart-o
                 color $play-hearth-border
 
-      .action
-        .bottom
-          background: $play-continue-bkg
-          color $play-continue-color
-          height 100%
-          margin 0
-          text-transform uppercase
-          width 100%
-
     .message
-      bottom 50%
+      top 25%
       left 0
       position absolute
       right 0
@@ -184,3 +202,18 @@ body
         color #dbb62b
         font-size 3.5rem
         font-weight 900
+
+      .action
+        margin-top 2rem
+
+        .button
+          width calc(100% - 1rem)
+
+          &.more
+            button-lg($play-more-bkg, $play-more-color)
+
+          &.continue
+            button-lg($play-continue-bkg, $play-continue-color)
+
+          &.surrender
+            button-lg($play-surrender-bkg, $play-surrender-color)

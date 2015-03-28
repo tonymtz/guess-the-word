@@ -1,12 +1,13 @@
 angular.module('hangman').config([
   '$stateProvider',
-  function($stateProvider) {
+  '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
     'use strict';
 
     $stateProvider
       .state({
         name: 'home',
-        url: '',
+        url: '/',
         templateUrl: 'home.html',
         controller: 'HomeController'
       })
@@ -16,5 +17,7 @@ angular.module('hangman').config([
         templateUrl: 'play.html',
         controller: 'PlayController'
       });
+
+    $urlRouterProvider.otherwise('/');
   }
 ]);

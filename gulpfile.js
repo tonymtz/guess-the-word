@@ -36,6 +36,8 @@ switch(true) {
 env.buildDir = 'build';
 env.bundles = require('./apps/bundles.json');
 
+env.productionEnable = argv.prod || argv.production || false;
+
 env.getRoute = function(pack, customPrefix) {
   var path,
     prefix;

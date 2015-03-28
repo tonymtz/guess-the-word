@@ -19,7 +19,7 @@ gulp.task('scripts', ['jshint', 'scripts:tests', 'config'], function() {
     concat = require('gulp-concat');
     stream = gulp.src(env.getRoute('scripts'))
       .pipe(gAngularFilesort())
-      .pipe(concat('huddy.min.js'))
+      .pipe(concat('ftw.min.js'))
       .pipe(gulp.dest(buildDirectory))
       .pipe(uglify({outSourceMap: true}))
       .pipe(gulp.dest(buildDirectory));

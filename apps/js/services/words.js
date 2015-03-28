@@ -1,7 +1,7 @@
 angular.module('hangman.services')
   .factory('WordsService', [
-    'DICTIONARY',
-    function(DICTIONARY) {
+    'DICTIONARY_EN',
+    function(DICTIONARY_EN) {
       'use strict';
 
       var wordsService = {},
@@ -10,7 +10,7 @@ angular.module('hangman.services')
 
       wordsService.getCategories = function() {
         if (!categories.length) {
-          for (var category in DICTIONARY) {
+          for (var category in DICTIONARY_EN) {
             categories.push(category);
           }
         }
@@ -22,7 +22,7 @@ angular.module('hangman.services')
       };
 
       wordsService.getWord = function() {
-        var words = DICTIONARY[category],
+        var words = DICTIONARY_EN[category],
           index = Math.round(Math.random() * (words.length - 1));
         return words[index];
       };

@@ -13,14 +13,13 @@
 
     .large-12.columns.pause-screen(data-ng-show="pause")
         span PAUSE
+        .action
+            button.button(data-ng-click="goHome()") Back To Menu
 
-    .large-12.columns.keyboard(data-ng-hide="pause")
-        button.button.radius.tiny.secondary(data-ng-repeat="key in keys" data-ng-click="digest(key)" data-ng-disabled="key.status || gameover" data-ng-class="{correct: key.status === 1, wrong: key.status === 2}") {{key.char}}
+    .large-12.columns.keyboard(data-ng-hide="pause" data-ng-class="{'disabled': gameover}")
+        button.button.radius.secondary(data-ng-repeat="key in keys" data-ng-click="digest(key)" data-ng-disabled="key.status || gameover" data-ng-class="{correct: key.status === 1, wrong: key.status === 2}") {{key.char}}
 
     footer
-        .action(data-ng-show="gameover")
-            button.bottom(data-ng-click="initialize()") New Game
-
         .status(data-ng-hide="gameover")
             rating(data-ng-model="chances")
 
@@ -28,4 +27,8 @@
         .win(data-ng-show="win")
             h1 GOOD JOB!
         .loose(data-ng-show="!win")
-            h1 Try it again!
+            h1 You Lose!
+        .action
+            button.button.more(data-ng-show="win" data-ng-click="initialize()") Next Word
+            button.button.continue(data-ng-show="!win" data-ng-click="initialize()") Try Again
+            button.button.surrender(data-ng-click="goHome()") Back To Menu

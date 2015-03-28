@@ -1,11 +1,11 @@
 {
-  "name": "huddy-signup",
+  "name": "ftw",
   "version": "0.1.0",
-  "homepage": "git@bitbucket.org:huddyme/dashboard.git",
+  "homepage": "https://github.com/TonyMtz/find-the-word.git",
   "authors": [
-    "Huddy, Inc."
+    "TonyMtz"
   ],
-  "description": "Huddy Signup Application",
+  "description": "find the word",
   "license": "MIT",
   "private": true,
   "dependencies": {
