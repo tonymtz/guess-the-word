@@ -17,6 +17,10 @@ angular.module('hangman.services')
         return categories;
       };
 
+      wordsService.getCategory = function() {
+        return category;
+      };
+
       wordsService.setCategory = function(userInput) {
         category = userInput;
       };

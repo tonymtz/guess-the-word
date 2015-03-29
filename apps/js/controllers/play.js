@@ -17,6 +17,7 @@ angular.module('hangman').controller('PlayController', [
     $scope.initialize = function() {
       var that = this;
 
+      this.currentCategory = WordsService.getCategory();
       this.currentWord = WordsService.getWord();
 
       this.hidden = this.currentWord.split('').map(function(char) {

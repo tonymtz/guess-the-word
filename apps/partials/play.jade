@@ -1,10 +1,12 @@
 .row.play(data-ng-init="initialize()")
     .top
-        .pause
-            i.fa(data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}")
         .time
             i.fa.fa-clock-o
             span {{countDown}}
+        .category
+            span {{currentCategory}}
+        .pause
+            i.fa(data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}")
     .large-12.columns.word(data-ng-hide="pause")
         ul.word
             li.item(data-ng-repeat="item in hidden")
@@ -12,9 +14,9 @@
                 span.char(data-ng-if="!item.hidden") {{item.char}}
 
     .large-12.columns.pause-screen(data-ng-show="pause")
-        span PAUSE
+        span {{ 'PAUSE' | translate }}
         .action
-            button.button(data-ng-click="goHome()") Back To Menu
+            button.button(data-ng-click="goHome()") {{ 'BACK_TO_MENU' | translate }}
 
     .large-12.columns.keyboard(data-ng-hide="pause" data-ng-class="{'disabled': gameover}")
         button.button.radius.secondary(data-ng-repeat="key in keys" data-ng-click="digest(key)" data-ng-disabled="key.status || gameover" data-ng-class="{correct: key.status === 1, wrong: key.status === 2}") {{key.char}}
@@ -25,10 +27,10 @@
 
     .message(data-ng-show="gameover")
         .win(data-ng-show="win")
-            h1 GOOD JOB!
+            h1 {{ 'YOU_WIN' | translate }}
         .loose(data-ng-show="!win")
-            h1 You Lose!
+            h1 {{ 'YOU_LOSE' | translate }}
         .action
-            button.button.more(data-ng-show="win" data-ng-click="initialize()") Next Word
-            button.button.continue(data-ng-show="!win" data-ng-click="initialize()") Try Again
-            button.button.surrender(data-ng-click="goHome()") Back To Menu
+            button.button.more(data-ng-show="win" data-ng-click="initialize()") {{ 'NEXT_WORD' | translate }}
+            button.button.continue(data-ng-show="!win" data-ng-click="initialize()") {{ 'TRY_AGAIN' | translate }}
+            button.button.surrender(data-ng-click="goHome()") {{ 'BACK_TO_MENU' | translate }}

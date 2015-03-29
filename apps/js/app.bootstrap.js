@@ -3,8 +3,8 @@ angular.module('hangman').constant('DICTIONARY_EN', {
     'tiger', 'cat', 'fish', 'turtle', 'eagle', 'rat', 'lion', 'shark', 'monkey', 'parrot', 'fox', 'sheep', 'dog', 'pig',
     'camel', 'bear', 'cow', 'horse', 'goose', 'cock', 'hen', 'elk', 'wolf', 'mouse', 'frog', 'ant', 'owl', 'deer',
     'bee', 'worm', 'rabbit', 'hippo', 'fly', 'snail', 'lamb', 'pigeon', 'goat', 'duck', 'snake', 'geese', 'zebra',
-    'bull', 'panda', 'turkey', 'rhino', 'octopus', 'crab', 'shrimp', 'whale', 'dolphin', 'chick', 'bird', 'beaver',
-    'moth', 'bat', 'toad', 'seal'
+    'bull', 'panda', 'turkey', 'rhino', 'crab', 'shrimp', 'whale', 'chick', 'bird', 'beaver', 'moth', 'bat', 'toad',
+    'seal'
   ],
   'AROUND US': [
     'sun', 'house', 'laptop', 'mobile', 'radio', 'street', 'wall', 'notes', 'pencil', 'tv', 'fan', 'closet', 'jar',
@@ -16,7 +16,7 @@ angular.module('hangman').constant('DICTIONARY_EN', {
     'heel', 'tongue', 'face', 'body', 'cheek', 'bone', 'blood', 'lips'
   ],
   'CLOTHES': [
-    'boots', 'brief', 'coat', 'dress', 'glove', 'panty', 'pants', 'shorts', 'socks', 'suit', 'vest', 'bag', 'sandals',
+    'boots', 'brief', 'coat', 'dress', 'glove', 'pants', 'shorts', 'socks', 'suit', 'vest', 'bag', 'sandals',
     'skirt', 'shirt', 'jacket', 'jersey', 'bikini', 'jeans', 'tie', 'scarf', 'wallet', 'tuxedo', 'blouse', 'ring',
     'pajama', 'belt', 'collar', 'watch', 'cap', 'hat', 'helmet', 'gloves', 'polo', 'bra'
   ],
@@ -27,7 +27,7 @@ angular.module('hangman').constant('DICTIONARY_EN', {
   'COUNTRIES': [
     'usa', 'mexico', 'chile', 'china', 'japan', 'spain', 'italy', 'canada', 'brazil', 'india', 'korea', 'russia',
     'uk', 'turkey', 'france', 'poland', 'angola', 'belize', 'greece', 'egypt', 'iran', 'serbia', 'cuba', 'syria',
-    'iraq', 'gambia', 'israel', 'peru', 'ghinea', 'haiti', 'monaco'
+    'iraq', 'gambia', 'israel', 'peru', 'guinea', 'haiti', 'monaco'
   ],
   'FAMILY': [
     'father', 'mother', 'cousin', 'sister', 'bro', 'aunt', 'niece', 'wife', 'nephew', 'son', 'uncle', 'granny', 'dad',
