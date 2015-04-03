@@ -9,16 +9,12 @@
 
     button.button.tall.discover(data-ng-click='goTo("discover")') {{'DISCOVER' | translate}}
 
-    button.button.tall.rush(data-ng-click='goTo("rush")' disabled)
-        i.fa.fa-lock(data-ng-hide='profile.unlocked.rush') &nbsp;
+    button.button.tall.rush(data-ng-click='goTo("rush")')
+        //i.fa.fa-lock(data-ng-hide='profile.unlocked.rush') &nbsp;
         | {{'RUSH' | translate}}
+
+    button.button.tall.store(data-ng-click='goTo("store")') {{'STORE' | translate}}
 
     button.button.tall.settings(data-ng-click='goTo("settings")') {{'SETTINGS' | translate}}
 
     button.button.tall.help(data-ng-click='goTo("help")') {{'HELP' | translate}}
-
-    button.button.social.facebook(data-ng-click='share()' disabled)
-        i.fa.fa-facebook
-
-    button.button.social.twitter(data-ng-click='share()' disabled)
-        i.fa.fa-twitter

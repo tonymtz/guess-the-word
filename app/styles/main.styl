@@ -27,6 +27,8 @@ $home-settings-bkg = $purple
 $home-settings-color = $white
 $home-help-bkg = $yellow
 $home-help-color = $white
+$home-store-bkg = $green
+$home-store-color = $white
 
 /* PLAY */
 $play-bkg = $dark-gray
@@ -153,15 +155,8 @@ body
           button($home-settings-bkg, $home-settings-color)
         &.help
           button($home-help-bkg, $home-help-color)
-        &.social
-          button($blue, $white)
-          float left
-          line-height 6rem
-          margin 0 1rem 1rem 0
-          width calc(50% - 0.5rem)
-        &.twitter
-          background-color $navy
-          margin-right 0
+        &.store
+          button($home-store-bkg, $home-store-color)
 
       ul.big-list
         height calc(100% - 4rem)

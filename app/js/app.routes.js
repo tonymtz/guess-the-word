@@ -28,6 +28,12 @@ angular.module('gtw').config([
         templateUrl: 'discover.html',
         controller: 'DiscoverController'
       })
+      .state({
+        name: 'rush',
+        url: '/rush',
+        templateUrl: 'rush.html',
+        controller: 'RushController'
+      })
 // -=
       .state({
         name: 'play',

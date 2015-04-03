@@ -10,6 +10,7 @@ angular.module('gtw').config([
       'RUSH': 'Rush',
       'SETTINGS': 'Settings',
       'HELP': 'Help',
+      'STORE': 'Store',
 
       'PAUSE': 'Pause',
       'BACK_TO_MENU': 'Back to menu',
@@ -26,6 +27,7 @@ angular.module('gtw').config([
       'RUSH': 'Carrera',
       'SETTINGS': 'Ajustes',
       'HELP': 'Ayuda',
+      'STORE': 'Tienda',
 
       'PAUSE': 'Pause',
       'BACK_TO_MENU': 'Back to menu',
