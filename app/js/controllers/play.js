@@ -1,10 +1,11 @@
-angular.module('hangman').controller('PlayController', [
+angular.module('gtw.controllers').controller('PlayController', [
   '$scope',
   '$rootScope',
   '$window',
   'WordsService',
+  'Profile',
   '$interval',
-  function($scope, $rootScope, $window, WordsService, $interval) {
+  function($scope, $rootScope, $window, WordsService, Profile, $interval) {
     'use strict';
 
     var alphabet = 'abcdefghijklmnopqrstuvwxyz',
@@ -19,6 +20,7 @@ angular.module('hangman').controller('PlayController', [
 
       this.currentCategory = WordsService.getCategory();
       this.currentWord = WordsService.getWord();
+      //this.currentWord = 'mmmmmmm';
 
       this.hidden = this.currentWord.split('').map(function(char) {
         return {char: char, hidden: true};
@@ -47,6 +49,11 @@ angular.module('hangman').controller('PlayController', [
     };
 
     $scope.teardown = function() {
+      if ($scope.win) {
+        Profile.addWord($scope.currentWord);
+        Profile.addMoney(1);
+      }
+
       $scope.gameover = true;
       $interval.cancel(timer);
       $scope.showHiddenWord();
@@ -110,11 +117,4 @@ angular.module('hangman').controller('PlayController', [
         $scope.teardown();
       }
     };
-
-    $scope.$watch('userInput', function(value) {
-      if (value) {
-        $scope.check(value);
-        $scope.userInput = '';
-      }
-    });
   }]);

@@ -1,0 +1,24 @@
+.header(data-ng-init="initialize()")
+    h1 {{'GUESS_THE_WORD' | translate}}
+
+.wrapper
+    .ribbon
+        .money
+            i.fa.fa-money
+            | {{money}}
+
+    button.button.tall.discover(data-ng-click='goTo("discover")') {{'DISCOVER' | translate}}
+
+    button.button.tall.rush(data-ng-click='goTo("rush")' disabled)
+        i.fa.fa-lock(data-ng-hide='profile.unlocked.rush') &nbsp;
+        | {{'RUSH' | translate}}
+
+    button.button.tall.settings(data-ng-click='goTo("settings")') {{'SETTINGS' | translate}}
+
+    button.button.tall.help(data-ng-click='goTo("help")') {{'HELP' | translate}}
+
+    button.button.social.facebook(data-ng-click='share()' disabled)
+        i.fa.fa-facebook
+
+    button.button.social.twitter(data-ng-click='share()' disabled)
+        i.fa.fa-twitter

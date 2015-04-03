@@ -1,12 +1,13 @@
-.row.play(data-ng-init="initialize()")
-    .top
-        .time
-            i.fa.fa-clock-o
-            span {{countDown}}
-        .category
-            span {{currentCategory}}
-        .pause
-            i.fa(data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}")
+.header.play(data-ng-init="initialize()")
+    .time
+        i.fa.fa-clock-o
+        span {{countDown}}
+    .category
+        span {{currentCategory}}
+    .pause
+        i.fa(data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}")
+
+.wrapper.play(data-ng-init="initialize()")
     .large-12.columns.word(data-ng-hide="pause")
         ul.word
             li.item(data-ng-repeat="item in hidden")

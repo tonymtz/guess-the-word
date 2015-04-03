@@ -1,0 +1,32 @@
+.language
+  margin 20% 1rem 0
+
+  ul
+    list-style none
+    text-align center
+
+    li
+      display inline-block
+      margin 0 0 5rem
+
+      &:last-child
+        margin 0
+
+    .flag
+      background white no-repeat top left center
+      background-size cover
+      display inline-block
+      height 10rem
+      width 10rem
+
+      &.en
+        background-image url('../svg/flag-us.svg')
+
+      &.es
+        background-image url('../svg/flag-es.svg')
+
+    input[type=radio]
+      display none
+
+      &:checked + label
+        box-shadow 0 0 2em $white

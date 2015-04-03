@@ -1,4 +1,4 @@
-angular.module('hangman.directives')
+angular.module('gtw.directives')
   .directive('rating', function() {
     'use strict';
 

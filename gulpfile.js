@@ -34,7 +34,7 @@ switch(true) {
 }
 
 env.buildDir = 'build';
-env.bundles = require('./apps/bundles.json');
+env.bundles = require('./app/bundles.json');
 
 env.productionEnable = argv.prod || argv.production || false;
 
@@ -45,11 +45,11 @@ env.getRoute = function(pack, customPrefix) {
     throw pack + ' pack is undefined, please update your bundles.json'.red;
   }
   if (typeof env.bundles[pack] === 'string') {
-    prefix = customPrefix || 'apps/';
+    prefix = customPrefix || 'app/';
     path = prefix + env.bundles[pack];
   } else {
     path = Array.prototype.map.call(env.bundles[pack], function(entry) {
-      prefix = customPrefix || 'apps/';
+      prefix = customPrefix || 'app/';
       return entry[0] === '!' ? '!' + prefix + entry.slice(1) : prefix + entry;
     });
   }

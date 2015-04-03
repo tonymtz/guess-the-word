@@ -1,0 +1,9 @@
+.header(data-ng-init='initialize()')
+    //button.back
+    //    i.fa.fa-chevron-left
+    h1 {{ 'DISCOVER' | translate }}
+
+.wrapper
+    ul.big-list
+        li.item(data-ng-repeat='category in categories' data-ng-init='this.color = color()' data-ng-class='this.color')
+            span.name(data-ng-click='setCategory(category)') {{category}}

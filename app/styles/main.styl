@@ -1,0 +1,213 @@
+$blue = #4676b1
+$dark-gray = #202025
+$gray-blue = #3d4254
+$green = #6ab7b0
+$light-gray = #585758
+$navy = #6aacc5
+$red = #dc694f
+$purple = #8f5ce7
+$white = #fff
+$yellow = #dbb62b
+
+/* MAIN */
+$body-bkg = $dark-gray
+$header-bkg = $dark-gray
+$header-color = $white
+$footer-button-bkg = $navy
+$footer-button-color = $white
+
+/* HOME */
+$home-bkg = $dark-gray
+$home-color = $white
+$home-discover-bkg = $blue
+$home-discover-color = $white
+$home-rush-bkg = $red
+$home-rush-color = $white
+$home-settings-bkg = $purple
+$home-settings-color = $white
+$home-help-bkg = $yellow
+$home-help-color = $white
+
+/* PLAY */
+$play-bkg = $dark-gray
+$play-color = $white
+$play-key-bkg = #595758
+$play-key-color = $white
+$play-key-green = #6bb8b1
+$play-key-red = #dc694f
+$play-top-bkg = #000
+$play-pause-surrender-bkg = #dc694f
+$play-pause-surrender-color = $white
+$play-more-bkg = #6bb8b1
+$play-more-color = $white
+$play-continue-bkg = #6aacc5
+$play-continue-color = $white
+$play-surrender-bkg = #dc694f
+$play-surrender-color = $white
+$play-hearth-color = #dc694f
+$play-hearth-border = #cc4d32
+$play-footer-bkg = #595758
+
+@font-face
+  font-family Droid Sans Mono
+  font-style normal
+  font-weight 400
+  src url(./../fonts/droidsansmono.ttf)
+
+button($button-bkg, $button-color)
+  background $button-bkg
+  border none
+  color $button-color
+  font-size 2.5rem
+  height 100%
+  line-height 4rem
+  margin 0
+  outline none
+  padding 0
+  position relative
+  text-transform uppercase
+  width 100%
+
+  &:disabled
+  &:active
+    opacity 0.4
+
+  &.tall
+    line-height 5rem
+    margin 0 0 1rem 0
+
+body
+  background $body-bkg
+  border none
+  font-family Droid Sans Mono
+  margin 0
+  padding 0
+
+  ul
+    margin 0
+    padding 0
+
+  #app
+    height 100%
+    width 100%
+
+    .header
+    .footer
+      height 4rem
+      margin 0
+      width 100%
+
+    .header
+      background $header-bkg
+      color $header-color
+      text-align center
+
+      h1
+        font-size 2.5rem
+        line-height 4rem
+        margin 0
+        text-transform uppercase
+
+    .footer
+      bottom 0
+      position absolute
+
+      .button
+        button($footer-button-bkg, $footer-button-color)
+
+    .wrapper
+      max-width none
+      width auto
+
+      .ribbon
+        color white
+        height 1rem
+        margin-bottom 1rem
+        line-height 1rem
+        padding 0 1rem
+
+        .money
+          float right
+
+          .fa
+            margin-right 0.5rem
+
+      .lock
+        color $gray
+        position absolute
+        width 100%
+        height 100%
+        left 0
+        top 0
+
+      .button
+        margin 0 0 0.5rem
+
+        &:first-child
+          margin-top 0.5rem
+        &.discover
+          button($home-discover-bkg, $home-discover-color)
+        &.rush
+          button($home-rush-bkg, $home-rush-color)
+        &.settings
+          button($home-settings-bkg, $home-settings-color)
+        &.help
+          button($home-help-bkg, $home-help-color)
+        &.social
+          button($blue, $white)
+          float left
+          line-height 6rem
+          margin 0 1rem 1rem 0
+          width calc(50% - 0.5rem)
+        &.twitter
+          background-color $navy
+          margin-right 0
+
+      ul.big-list
+        height calc(100% - 4rem)
+        overflow auto
+        position absolute
+        text-align center
+
+        li.item
+          color $home-color
+          display inline-block
+          font-size 3rem
+          list-style none
+          margin-bottom 0.5rem
+          width 100%
+
+          &:last-child
+            margin 0
+
+          &.blue
+            background $blue
+          &.green
+            background $green
+          &.red
+            background $red
+          &.yellow
+            background $yellow
+          &.navy
+            background $navy
+          &.purple
+            background $purple
+
+    //==
+
+    .home
+      background $home-bkg
+      height 100%
+      text-align center
+
+      .title
+        color $home-color
+        font-size 3rem
+        font-weight 900
+        height 6rem
+        line-height 6rem
+        margin 0
+        text-transform uppercase
+
+    @import 'language'
+    @import 'play'

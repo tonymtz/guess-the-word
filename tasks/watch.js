@@ -12,5 +12,5 @@ gulp.task('watch', ['assets', 'jshint', 'install', 'scripts', 'stylus', 'inject'
   gulp.watch(env.getRoute('assets'), ['assets']).on('change', livereload.changed);
   gulp.watch(env.getRoute('views'), ['inject']).on('change', livereload.changed);
   gulp.watch(env.getRoute('scripts'), ['jshint', 'scripts']).on('change', livereload.changed);
-  gulp.watch(env.getRoute('style'), ['stylus']).on('change', livereload.changed);
+  gulp.watch(env.getRoute('stylus'), ['stylus']).on('change', livereload.changed);
 });

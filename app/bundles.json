@@ -1,20 +1,17 @@
 {
   "app": "hangman",
   "bower_components": [
-    "jquery/dist/jquery.min.js",
     "angular/angular.min.js",
     "angular-ui-router/release/angular-ui-router.min.js",
     "angular-translate/angular-translate.min.js",
     "fontawesome/css/font-awesome.min.css",
-    "foundation/js/vendor/modernizr.js",
-    "foundation/js/foundation.min.js",
-    "foundation/css/normalize.css",
-    "foundation/css/foundation.css"
+    "ngstorage/ngStorage.min.js"
   ],
   "install": "bower.json",
   "assets": ["assets/**/*.*", "js/other/**/*"],
   "scripts": "js/**/*.js",
   "style": "styles/main.styl",
+  "stylus": "styles/*.styl",
   "tests": "tests/**/*.js",
   "views": ["index.jade", "partials/*.jade", "!layouts/**/*"]
 }

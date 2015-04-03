@@ -8,5 +8,5 @@ var gulp = require('gulp'),
   env = gutil.env;
 
 gulp.task('install', function() {
-  return bower({cwd: './apps'});
+  return bower({cwd: './app'});
 });

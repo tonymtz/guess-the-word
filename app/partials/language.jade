@@ -1,0 +1,11 @@
+.wrapper.language(data-ng-init='initialize()')
+    ul
+        li
+            input(type='radio' data-ng-model='language' value='en' id='flag-en')
+            label(for='flag-en' class='flag en') &nbsp;
+        li
+            input(type='radio' data-ng-model='language' value='es' id='flag-es')
+            label(for='flag-es' class='flag es') &nbsp;
+
+.footer
+    button.button(data-ng-click='goHome(this.language)') {{'NEXT' | translate}}

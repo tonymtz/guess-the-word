@@ -1,16 +1,16 @@
 {
-  "name": "ftw",
-  "version": "0.1.0",
+  "name": "gtw",
+  "version": "2.1.0",
   "private": true,
-  "description": "find the word",
+  "description": "guess the word",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "cd apps && ../node_modules/bower/bin/bower install",
     "start": "gulp",
     "test": "gulp test"
   },
   "engines": {
-    "node": "0.10.32",
+    "node": "0.10.38",
     "npm": "1.4.28"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "angular-mocks": "^1.3.12",
+    "bower": "^1.3.12",
     "chai": "^1.10.0",
     "colors": "^1.0.3",
     "del": "^1.1.1",
@@ -56,8 +57,5 @@
     "minimist": "^1.1.0",
     "mocha": "^2.1.0",
     "sinon": "^1.12.2"
-  },
-  "dependencies": {
-    "bower": "^1.3.12"
   }
 }

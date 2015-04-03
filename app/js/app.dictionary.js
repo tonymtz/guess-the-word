@@ -1,4 +1,4 @@
-angular.module('hangman').constant('DICTIONARY_EN', {
+angular.module('gtw').constant('DICTIONARY_EN', {
   'ANIMALS': [
     'tiger', 'cat', 'fish', 'turtle', 'eagle', 'rat', 'lion', 'shark', 'monkey', 'parrot', 'fox', 'sheep', 'dog', 'pig',
     'camel', 'bear', 'cow', 'horse', 'goose', 'cock', 'hen', 'elk', 'wolf', 'mouse', 'frog', 'ant', 'owl', 'deer',
